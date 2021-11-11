@@ -86,7 +86,7 @@ cdef class AioSpawnCache:
                 else:
                     snprintf(buff, 7, "?")
 
-                emplace_move(jobject, b'despawn_time', string(buff))
+                emplace_move(jobject, b'despawn_time', string(<char*>buff))
 
             emplace_move(jobject, b'duration', <int>(spawnpoint[DURATION] or 30))
 
