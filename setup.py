@@ -226,7 +226,7 @@ exts = [Extension('pogeo.altitude',
                   language='c++')]
 
 if file_ext == 'pyx':
-    exts = cythonize(exts)
+    exts = cythonize(exts, language_level = "3")
 
 setup(name='pogeo',
       version='0.4.0rc1',
